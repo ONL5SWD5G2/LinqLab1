@@ -30,10 +30,19 @@
 #region part 2
 
 #region 1
-var result4 = listgenerators.productlist.select(p => p.productid);
-foreach (var id in result4)
+//var result4 = listgenerators.productlist.select(p => p.productid);
+//foreach (var id in result4)
+//{
+//    Console.WriteLine(id);
+//}
+#endregion
+
+#region 2
+string[] words = { "mango", "peach", "kiwi" };
+var result5 = words.select(w => new { upper = w.toupper(), lower = w.tolower() });
+foreach (var item in result5)
 {
-    Console.WriteLine(id);
+    Console.WriteLine($"{item.upper}, {item.lower}");
 }
 #endregion
 

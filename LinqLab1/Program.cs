@@ -47,10 +47,19 @@
 #endregion
 
 #region 3
-var result6 = listgenerators.productlist.select(p => new { p.productid, p.productname, stock = p.unitsinstock });
-foreach (var p in result6)
+//var result6 = listgenerators.productlist.select(p => new { p.productid, p.productname, stock = p.unitsinstock });
+//foreach (var p in result6)
+//{
+//    Console.WriteLine($"{p.productname}, stock: {p.stock}");
+//}
+#endregion
+
+#region 4
+int[] arrnumbers = { 3, 1, 2, 0, 4, 9, 6, 7, 8, 5 };
+var result7 = arrnumbers.select((num, index) => new { num, index }).where(x => x.num == x.index);
+foreach (var item in result7)
 {
-    Console.WriteLine($"{p.productname}, stock: {p.stock}");
+    Console.WriteLine(item.num);
 }
 #endregion
 

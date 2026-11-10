@@ -64,15 +64,23 @@
 #endregion
 
 #region 5
-int[] numbersa = { 1, 3, 4, 6, 7, 9 };
-int[] numbersb = { 2, 4, 6, 8 };
-var result8 = from a in numbersa
-              from b in numbersb
-              where a < b
-              select new { a, b };
-foreach (var pair in result8)
+//int[] numbersa = { 1, 3, 4, 6, 7, 9 };
+//int[] numbersb = { 2, 4, 6, 8 };
+//var result8 = from a in numbersa
+//              from b in numbersb
+//              where a < b
+//              select new { a, b };
+//foreach (var pair in result8)
+//{
+//    Console.WriteLine($"{pair.pair.a} is less than {pair.pair.b}");
+//}
+#endregion
+
+#region 6
+var result9 = listgenerators.customerlist.selectmany(c => c.orders).where(o => o.total < 800.00m);
+foreach (var o in result9)
 {
-    Console.WriteLine($"{pair.pair.a} is less than {pair.pair.b}");
+    Console.WriteLine(o.orderid);
 }
 #endregion
 

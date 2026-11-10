@@ -38,11 +38,19 @@
 #endregion
 
 #region 2
-string[] words = { "mango", "peach", "kiwi" };
-var result5 = words.select(w => new { upper = w.toupper(), lower = w.tolower() });
-foreach (var item in result5)
+//string[] words = { "mango", "peach", "kiwi" };
+//var result5 = words.select(w => new { upper = w.toupper(), lower = w.tolower() });
+//foreach (var item in result5)
+//{
+//    Console.WriteLine($"{item.upper}, {item.lower}");
+//}
+#endregion
+
+#region 3
+var result6 = listgenerators.productlist.select(p => new { p.productid, p.productname, stock = p.unitsinstock });
+foreach (var p in result6)
 {
-    Console.WriteLine($"{item.upper}, {item.lower}");
+    Console.WriteLine($"{p.productname}, stock: {p.stock}");
 }
 #endregion
 

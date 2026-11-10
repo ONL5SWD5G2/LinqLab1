@@ -55,11 +55,24 @@
 #endregion
 
 #region 4
-int[] arrnumbers = { 3, 1, 2, 0, 4, 9, 6, 7, 8, 5 };
-var result7 = arrnumbers.select((num, index) => new { num, index }).where(x => x.num == x.index);
-foreach (var item in result7)
+//int[] arrnumbers = { 3, 1, 2, 0, 4, 9, 6, 7, 8, 5 };
+//var result7 = arrnumbers.select((num, index) => new { num, index }).where(x => x.num == x.index);
+//foreach (var item in result7)
+//{
+//    Console.WriteLine(item.num);
+//}
+#endregion
+
+#region 5
+int[] numbersa = { 1, 3, 4, 6, 7, 9 };
+int[] numbersb = { 2, 4, 6, 8 };
+var result8 = from a in numbersa
+              from b in numbersb
+              where a < b
+              select new { a, b };
+foreach (var pair in result8)
 {
-    Console.WriteLine(item.num);
+    Console.WriteLine($"{pair.pair.a} is less than {pair.pair.b}");
 }
 #endregion
 

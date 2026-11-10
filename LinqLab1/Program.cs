@@ -77,8 +77,16 @@
 #endregion
 
 #region 6
-var result9 = listgenerators.customerlist.selectmany(c => c.orders).where(o => o.total < 800.00m);
-foreach (var o in result9)
+//var result9 = listgenerators.customerlist.selectmany(c => c.orders).where(o => o.total < 800.00m);
+//foreach (var o in result9)
+//{
+//    Console.WriteLine(o.orderid);
+//}
+#endregion
+
+#region 7
+var result10 = listgenerators.customerlist.selectmany(c => c.orders).where(o => o.orderdate.year >= 1997);
+foreach (var o in result10)
 {
     Console.WriteLine(o.orderid);
 }

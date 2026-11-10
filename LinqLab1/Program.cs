@@ -17,11 +17,23 @@
 #endregion
 
 #region 3
-string[] arr = { "cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
-var result3 = arr.select((name, index) => new { name, index }).where(x => x.name.length < x.index).select(x => x.name);
-foreach (var item in result3)
+//string[] arr = { "cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
+//var result3 = arr.select((name, index) => new { name, index }).where(x => x.name.length < x.index).select(x => x.name);
+//foreach (var item in result3)
+//{
+//    Console.WriteLine(item);
+//}
+#endregion
+
+#endregion
+
+#region part 2
+
+#region 1
+var result4 = listgenerators.productlist.select(p => p.productid);
+foreach (var id in result4)
 {
-    Console.WriteLine(item);
+    Console.WriteLine(id);
 }
 #endregion
 
